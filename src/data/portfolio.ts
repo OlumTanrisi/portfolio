@@ -37,7 +37,7 @@ export const projects = [
 export const experience = [
   {
     period: '05/2024 - Presente',
-    title: 'Auxiliar T.I Imobiliária Santamerica',
+    title: 'Auxiliar T.I Imobiliária Santamérica',
     description: 'Responsavel por auxiliar usuarios com problemas de hardwere e softwere. Alem de gerenciar rede, servidores e sistemas que são desenvolvido internamente.',
   },
   {
