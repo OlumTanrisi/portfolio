@@ -72,7 +72,7 @@ function Navbar({ theme, onToggleTheme }: { theme: Theme; onToggleTheme: () => v
             <span className="local-clock-label">Horário -</span>
             <time>{localTime}</time>
           </div>
-          <a className="nav-cta" href="mailto:hello@joao.dev">Fale comigo</a>
+          <a className="nav-cta" href="mailto:subjvieira@gmail.com">Fale comigo</a>
           <button className="menu-toggle" type="button" aria-expanded={menuOpen} aria-controls="mobile-navigation" aria-label={menuOpen ? 'Close menu' : 'Open menu'} onClick={() => setMenuOpen((open) => !open)}>
             {menuOpen ? <X size={21} strokeWidth={1.7} /> : <Menu size={21} strokeWidth={1.7} />}
           </button>
