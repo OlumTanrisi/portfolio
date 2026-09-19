@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Menu, Moon, Sun, X } from 'lucide-react'
 import { navigation } from '../../data/navigation'
+import { contactEmail } from '../../data/socialLinks'
 import Container from './Container'
 import type { Theme } from '../../hooks/useTheme'
 
@@ -72,7 +73,11 @@ function Navbar({ theme, onToggleTheme }: { theme: Theme; onToggleTheme: () => v
             <span className="local-clock-label">Horário -</span>
             <time>{localTime}</time>
           </div>
+<<<<<<< HEAD
           <a className="nav-cta" href="mailto:subjvieira@gmail.com">Fale comigo</a>
+=======
+          <a className="nav-cta" href={contactEmail}>Fale comigo</a>
+>>>>>>> 005f7db (feat: ajust socialLinks)
           <button className="menu-toggle" type="button" aria-expanded={menuOpen} aria-controls="mobile-navigation" aria-label={menuOpen ? 'Close menu' : 'Open menu'} onClick={() => setMenuOpen((open) => !open)}>
             {menuOpen ? <X size={21} strokeWidth={1.7} /> : <Menu size={21} strokeWidth={1.7} />}
           </button>
@@ -81,7 +86,7 @@ function Navbar({ theme, onToggleTheme }: { theme: Theme; onToggleTheme: () => v
       <nav id="mobile-navigation" className={`mobile-nav ${menuOpen ? 'mobile-nav--open' : ''}`} aria-label="Mobile navigation">
         <Container>
           {navigation.map((item) => <a key={item.href} href={item.href} className={activeSection === item.href.slice(1) ? 'mobile-nav-link--active' : undefined} onClick={() => { setActiveSection(item.href.slice(1)); closeMenu() }}>{item.label}</a>)}
-          <a href="mailto:hello@joao.dev" onClick={closeMenu}>Fale Comigo <span>↗</span></a>
+          <a href={contactEmail} onClick={closeMenu}>Fale Comigo <span>↗</span></a>
         </Container>
       </nav>
     </header>

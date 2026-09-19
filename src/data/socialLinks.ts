@@ -6,3 +6,8 @@ export const socialLinks: Array<{ label: string; href: string; icon: LucideIcon 
   { label: 'GitHub', href: 'https://github.com/OlumTanrisi', icon: Github },
   { label: 'Email', href: 'mailto:subjvieira@gmail.com', icon: Mail },
 ]
+
+const emailLink = socialLinks.find((link) => link.label === 'Email')
+
+export const contactEmail = emailLink?.href ?? 'mailto:'
+export const contactEmailLabel = contactEmail.replace(/^mailto:/, '')
